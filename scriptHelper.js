@@ -27,20 +27,32 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
  }
  
- function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-
+ function formSubmission(document, list, pilotStatus, copilotStatus, fuelLevel, cargoLevel) {
+    let fuel = document.getElementByID("fuelStatus");
+    let cargo = document.getElementByID("cargoStatus");
     //change innerHTML?
-    if (validateInput(pilot) === "Empty") {
+    if (validateInput(pilotStatus) === "Empty" || validateInput(copilotStatus) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert("Input must be valid")
     }
-    if (validateInput(copilot) === "Is a Number") {
+    else if (validateInput(copilotStatus) === "Is a Number" || validateInput(pilotStatus) === "Is a Number" || validateInput(fuelLevel) !== "Is a Number" || validateInput(cargoLevel) !== "Is a Number") {
         alert("Input must be valid")
+    } else {
+        list.style.visibility = "visible";
+        pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
+        copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
+        //
+        //
     }
-    if (validateInput(fuelLevel) < 10000) {
-        alert("Fuel level too low for launch")
-    }
-    if (validateInput(cargoLevel) > 10000) {
-        alert("Cargo mass low enough for launch")
+    if (validateInput(fuelLevel) < 10000 && cargoLevel < 10000) {
+        fuel.innerHTML = "Fuel level too low for launch";
+        cargo.innerHTML = "Cargo mass low enough for launch";
+        //launchStatus
+        //visibility
+        //color change
+
+    } 
+    else if (validateInput(cargoLevel) > 10000 && fuelLevel < 10000 && cargoLevel > 10000) {
+       //similar to above 
     }
  }
  

@@ -23,14 +23,14 @@ window.addEventListener("load", function() {
 
  //task 2
 
-// let list = this.document.getElementById("faultyItems");
-// let form = document.querySelector("form");
-//     form.addEventListener("submit", function(event) {
-//         let pilot = document.getElementById("input[name=pilotName]");
-//         let copilot = document.getElementById("input[name=copilotName]");
-//         let fuelLevel = document.getElementById("input[name=fuelLevel]");
-//         let cargoLevel = document.getElementById("input[name=cargoMass]");
-//         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
-//     });
+let list = this.document.getElementById("faultyItems");
+let form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        let pilot = document.getElementById("input[name=pilotName]");
+        let copilot = document.getElementById("input[name=copilotName]");
+        let fuelLevel = document.getElementById("input[name=fuelLevel]");
+        let cargoLevel = document.getElementById("input[name=cargoMass]");
+        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
+    });
 
 // event.preventDefault();
