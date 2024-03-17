@@ -1,6 +1,6 @@
 // Write your JavaScript code here!
 
-// const { pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
+const { pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
 
@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
         addDestinationInfo(document, planet.name, diameter, star, distance, moons, imageUrl)
     })
     
- });
+});
 
 
  //task 2
