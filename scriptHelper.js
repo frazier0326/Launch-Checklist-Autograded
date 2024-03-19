@@ -36,10 +36,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let pilotStatus = document.getElementById("pilotStatus");
     let copilotStatus = document.getElementById("copilotStatus");
     let launchStatus = document.getElementById("launchStatus");
-    if (validateInput(pilotStatus) === "Empty" || validateInput(copilotStatus) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert("Input must be valid")
     }
-    else if (validateInput(copilotStatus) === "Is a Number" || validateInput(pilotStatus) === "Is a Number" || validateInput(fuelLevel) !== "Is a Number" || validateInput(cargoLevel) !== "Is a Number") {
+    else if (validateInput(copilot) === "Is a Number" || validateInput(pilot) === "Is a Number" || validateInput(fuelLevel) !== "Is a Number" || validateInput(cargoLevel) !== "Is a Number") {
         alert("Input must be valid")
     } else {
         list.style.visibility = "visible";
@@ -65,6 +65,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
        launchStatus.style.color = 'red';
         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
     }
+    
     // else if (cargoLevel > 10000 && fuelLevel > 10000) {
     //     list.style.visibility = "visible";
     //     launchStatus.style.color = 'red';

@@ -1,9 +1,9 @@
 // Write your JavaScript code here!
 
-const { pickPlanet, addDestinationInfo, formSubmission, myFetch } = require("./scriptHelper");
+// const { pickPlanet, addDestinationInfo, formSubmission, myFetch } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
-    
+
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = myFetch();
@@ -24,7 +24,7 @@ window.addEventListener("load", function() {
         addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
     })
     
-});
+
 
 
  //task 2
@@ -48,3 +48,4 @@ let form = document.querySelector("form");
         let cargoLevel = document.querySelector("input[name=cargoMass]").value;
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
     });
+});
